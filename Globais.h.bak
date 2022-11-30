@@ -1,0 +1,35 @@
+#pragma once
+
+#define numInstr 24
+
+enum modo_ender{ RegToReg,ImdToReg,MemToReg,RegToMem, invalido};
+
+
+
+enum Opcode{
+	nop = 0, 
+	clc = 1, 
+	stc = 2, 
+	hlt = 3,
+	notRegToReg = 0x05,
+	movRegToReg = 0x08, movImdToReg = 0x10, movMemToReg = 0x18, movRegToMem = 0x20,
+	andRegToReg = 0x28, andImdToReg = 0x30, andMemToReg = 0x38,
+	orRegToReg  = 0x40, orImdToReg  = 0x48,	orMemToReg  = 0x50,
+	xorRegToReg = 0x58,	xorImdToReg = 0x60,	xorMemToReg = 0x68,
+	addRegToReg = 0x78,	addImdToReg = 0x80,	addMemToReg = 0x88,	
+	subRegToReg = 0x98,	subImdToReg = 0x90,	subMemToReg = 0x98,	
+	divRegToReg = 0xA8,	
+	mulRegToReg = 0xB9,		
+	jmp = 0xBA,
+	jc = 0xBB,
+	jnc = 0xBC,
+	je = 0xBD,	
+	jne = 0xBE,	
+	jg = 0xBF,	
+	jge = 0xC0,
+	jl = 0xC1,
+	jle = 0xC2,
+	cmpRegToReg = 0xE0, cmpImdToReg = 0xE8, cmpMemToReg = 0xF8
+	
+};
+		
